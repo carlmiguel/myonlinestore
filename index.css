@@ -1,0 +1,326 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+  --HEADERCOLOR: rgba(0, 0, 0, 0.86);
+  --HOMEPAGECOLOR: rgb(245, 237, 237);
+  --FOOTERCOLOR: rgb(239, 40, 40);
+}
+
+li, a{
+ font-weight: 800;
+ text-decoration: none;
+ color: aliceblue;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--HEADERCOLOR);
+    padding: 5px 5%;
+}
+
+.nav{
+    list-style: none;
+}
+
+.nav li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav li a:hover{
+    color: red;
+}
+
+.nav li a:active{
+    color: rgba(197, 26, 26, 0.899);
+}
+
+.shop{
+    font-size: 20px;
+    color: red;
+    font-weight: bolder;
+}
+
+.homepage{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 70px;
+    background-color: var(--HOMEPAGECOLOR);
+}
+
+.intro{
+    color: rgba(0, 0, 0, 0.789);
+    font-size: 35px;
+}
+
+.home-para{
+    font-size: 15px;
+}
+
+.shopnow{
+    border: none;
+    padding: 15px;
+    width: 160px;
+    margin-top: 10px;
+    background-color: red;
+    cursor: pointer;
+    color: aliceblue;
+    font-weight: bolder;
+}
+
+.shopnow:hover{
+    background-color: rgba(231, 15, 15, 0.881);
+}
+
+.shopnow:active{
+    background-color: rgba(173, 20, 20, 0.781);
+}
+
+#about{
+    margin-top: 30px;
+    text-align: center;
+}
+
+#about img{
+    margin-top: 30px;
+    border-radius: 50%;
+}
+
+#about p{
+    margin-top: 50px;
+}
+
+#product h2{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    margin-bottom: 30px;
+}
+
+.prodcontain{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 25px;
+    justify-content: center;
+}
+
+.card{
+    width: 320px;
+    padding-top: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    grid-column: span 1;
+    cursor: pointer;
+}
+
+.card h1{
+    font-size: 22px;
+}
+
+.card p{
+    font-size: larger;
+    font-weight: 700;
+}
+
+.card:hover{
+    transform: scale(1.03);
+    transition: all 1s ease;
+}
+
+.buy{
+    border: none;
+    outline: 0;
+    padding: 13px;
+    color: aliceblue;
+    background-color: rgba(18, 17, 17, 0.91);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.buy:hover{
+    background-color: red;
+}
+
+.buy:active{
+    background-color: rgba(225, 18, 18, 0.89);
+}
+
+.procon{
+    margin-top: 50px;
+    display: grid;
+    justify-content: center;
+    gap: 5px;
+}
+
+.protitle{
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+.pm1{
+    padding: 19px;
+    display: flex;
+    align-items: center;
+    width: 900px;
+    justify-content: space-around;
+    background-color: rgba(7, 7, 7, 0.904);
+    cursor: pointer;
+    grid-column: span 2;
+}
+
+.pm2{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    width: 447px;
+    justify-content: space-around;
+    background-color: aquamarine;
+    cursor: pointer;
+}
+
+.pm3{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    width: 447px;
+    justify-content: space-around;
+    background-color: rgb(1, 1, 255);
+    cursor: pointer;
+}
+
+.pm1 h2{
+    color: yellow;
+}
+
+.pm2 h2{
+    color: yellow;
+}
+
+.pm3 h2{
+    color: yellow;
+}
+
+.pm1:hover{
+    transform: scale(1.03);
+    transition: all 1s ease;
+}
+
+.pm2:hover{
+    transform: scale(1.03);
+    transition: all 1s ease;
+}
+
+.pm3:hover{
+    transform: scale(1.03);
+    transition: all 1s ease;
+}
+
+footer{
+    padding: 10px;
+    background-color: var(--FOOTERCOLOR);
+    color: aliceblue;
+    margin-top: 50px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#about p{
+    display: inline-block;
+    text-align: justify;
+}
+
+.fa{
+    color: orange;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 768px){
+    .nav li{
+        display: flex;
+        padding: 5px;
+    }
+
+    .homepage{
+        padding: 30px;
+    }
+
+    .procon{
+        grid-template-columns: auto;
+    }
+
+    .pm1, .pm2, .pm3{
+        width: 100%;
+        grid-column: span 1;
+    }
+
+    .prodcontain{
+        grid-template-columns: auto;
+    }
+
+    .card{
+        width: 100%;
+    }
+
+    .iphone img{
+        max-width: 100%;
+        height: 200px;
+    }
+    
+    .intro{
+        font-size: 25px;
+    }
+
+    .home-para{
+        font-size: 10px;
+    }
+
+    .shopnow{
+        width: 100%;
+        padding: 7px;
+    }
+
+    header{
+        justify-content: space-evenly;
+    }
+
+    .pm1 img{
+     height: 50px;
+    }
+
+    .pm2 img{
+     height: 100px;
+    }
+
+    .pm3 img{
+     height: 100px;
+    }
+
+    #about h1{
+        font-size: medium;
+    }
+
+    #about img{
+        height: 60px;
+    }
+
+} 
